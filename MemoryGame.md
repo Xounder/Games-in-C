@@ -1,7 +1,4 @@
-#Games in C
-
-
-#Memory Game
+//Memory Game
 
 
 #include <stdio.h>
