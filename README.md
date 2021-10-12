@@ -9,14 +9,14 @@
 #include <stdbool.h>
 #include <locale.h>
 #include <time.h>
-int pontos1=0, pontos2=0, pontos3=0;
-char Nome1[7],Nome2[7],Nome3[7];
+int pontos1 = 0, pontos2 = 0, pontos3 = 0;
+char Nome1[7], Nome2[7], Nome3[7];
 void InicSair(){
-    void GeraValor(int val, int *p1,int *p2,int *p3, char *n1[],char *n2[],char *n3[]);
+    void GeraValor(int val, int *p1, int *p2, int *p3, char *n1[], char *n2[], char *n3[]);
     int Dificuldade();
-    void Pontuacao(int p1,int p2, int p3,char n1[], char n2[], char n3[]);
+    void Pontuacao(int p1, int p2, int p3, char n1[], char n2[], char n3[]);
     bool escolha = false;
-    int dificuldade=3, opcoes = 0;
+    int dificuldade = 3, opcoes = 0;
     char choose;
 
     while(escolha==false){
