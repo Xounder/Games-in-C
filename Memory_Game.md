@@ -1,11 +1,11 @@
 //Memory Game
 
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<stdbool.h>
-#include<locale.h>
-#include<time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <locale.h>
+#include <time.h>
 int pontos1 = 0, pontos2 = 0, pontos3 = 0;
 char Nome1[7], Nome2[7], Nome3[7];
 void InicSair(){
@@ -15,14 +15,12 @@ void InicSair(){
     bool escolha = false;
     int dificuldade = 3, opcoes = 0;
     char choose;
-
     while(escolha == false){
         if(opcoes == 0){
         printf("\nIniciar");
         printf("\nDificuldade");
         printf("\nPontuação");
         printf("\nSair <-");
-
         choose = getch();
         fflush(stdin);
         if(choose == 'w' || choose == 'W'){
@@ -40,10 +38,8 @@ void InicSair(){
             printf("\nDificuldade");
             printf("\nPontuação <-");
             printf("\nSair");
-
             choose = getch();
             fflush(stdin);
-
          if(choose == 'w' || choose == 'W'){
         opcoes++;
         choose = 'a';
@@ -55,16 +51,13 @@ void InicSair(){
             if(choose == 'x' || choose == 'X'){
              Pontuacao(pontos1, pontos2, pontos3, Nome1, Nome2, Nome3);
             }
-
         }else if (opcoes == 2){
            printf("\nIniciar");
             printf("\nDificuldade <-");
             printf("\nPontuação");
             printf("\nSair");
-
             choose = getch();
             fflush(stdin);
-
          if(choose == 'w' || choose == 'W'){
         opcoes++;
         choose = 'a';
@@ -76,7 +69,6 @@ void InicSair(){
             if(choose == 'x' || choose == 'X'){
                 dificuldade = Dificuldade();
             }
-
         }else if (opcoes == 3){
            printf("\nIniciar <-");
             printf("\nDificuldade");
@@ -136,7 +128,6 @@ void GeraValor(int val, int *p1, int *p2, int *p3, char *n1[], char *n2[], char 
     }
     CompPontuacao(pnts, p1, p2, p3, n1, n2, n3);
     sleep(2);
-
         while(chave == false){
         printf("\nDeseja continuar jogando na mesma dificuldade? S/N? ");
     espera = getch();
@@ -161,7 +152,6 @@ int Dificuldade(){
         printf("\nFácil <-       3 números");
         printf("\nMédio");
         printf("\nDifícil");
-
         choose = getch();
          fflush(stdin);
         if(choose == 's' || choose == 'S'){
@@ -177,10 +167,8 @@ int Dificuldade(){
            printf("\nFácil");
             printf("\nMédio <-      5 números");
             printf("\nDifícil");
-
             choose = getch();
             fflush(stdin);
-
          if(choose == 's' || choose == 'S'){
         opcoes++;
         choose = 'a';
@@ -193,7 +181,6 @@ int Dificuldade(){
             escolha = true;
                return 5;
             }
-
         }else if (opcoes == 2){
             printf("\nEscolha a Dificuldade:\n");
            printf("\nFácil");
@@ -242,7 +229,6 @@ void Pontuacao(int p1, int p2, int p3, char n1[], char n2[], char n3[]){
         printf("\n%d ----------------- %s\n", p1, n1);
         printf("\n%d ----------------- %s\n", p2, n2);
         printf("\n%d ----------------- %s\n", p3, n3);
-
     printf("\nEspere 5s para voltar ao menu...");
     sleep(3);
     system("cls");
